@@ -1,39 +1,37 @@
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw; 
+    height: auto; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
+    overflow-x: hidden; 
+    background: #ffffff; 
 }
 
 .container {
-    width: 100%;
-    height: 100vh;
-    max-width: 1920px;
-    max-height: 1080px;
+    width: 1920px;
+    height: 1080px;
     overflow: hidden;
     box-sizing: border-box;
 }
 
 .top-header {
-    display: flex;
+    display: flex; 
     justify-content: space-between; 
-    align-items: center;             
-    padding: 30px 120px;
-    height: 40px;
+    align-items: center;           
+    padding: 30px 120px; 
     background: #ffffff;
-    flex-direction: row;
-    width: 1920px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
+    width: 1920px; 
+    box-sizing: border-box;
+    position: absolute; 
+    left: 0;
+    top: 0; 
 }
 
 .title {
     display: flex;
-    flex-direction: row;
     gap: 4px;
     align-items: center;
     justify-content: flex-start;
@@ -43,12 +41,10 @@ body, html {
 
 .action-buttons {
     display: flex;
-    flex-direction: row;
     gap: 40px;
     align-items: center;
     justify-content: flex-start;
     flex-shrink: 0;
-    height: 40px;
     position: relative;
 }
 
@@ -60,19 +56,9 @@ a {
     border-radius: 5px;
     padding: 10px 20px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    position: relative;
-}
-
-.create-employee, .create-task {
-    text-align: left;
-    font-family: "FiraGo-Regular", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    position: relative;
 }
 
 .employee {
@@ -83,15 +69,29 @@ a {
     gap: 10px;
 }
 
-.create-employee {
-    color: var(--grey-shades-headlines, #212529);
-}
-
 .task {
     background: #8338ec;
     gap: 4px;
 }
 
+.create-employee, .create-task {
+    text-align: left;
+    font-family: "FiraGo-Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+}
+
+.create-employee {
+    color: var(--grey-shades-headlines, #212529);
+}
+
 .create-task {
     color: #ffffff;
+}
+
+.add {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
 }
